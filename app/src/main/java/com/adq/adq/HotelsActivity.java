@@ -1,52 +1,35 @@
 package com.adq.adq;
 
 
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.ActionBar;
+import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.widget.TextView;
 
 
-
-public class HotelsActivity extends ActionBarActivity implements ActionBar.TabListener {
+public class HotelsActivity extends ActionBarActivity {
 //    public class HotelsActivity extends Activity implements ActionBar.TabListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hotels);
 
-        setTabas();
+        Typeface iconsFamily = Typeface.createFromAsset(getAssets(), "fonts/glyphIcons.ttf");
 
 
-    }
+        TextView iconUser = (TextView) findViewById(R.id.tv_user);
+        iconUser.setTypeface(iconsFamily);
+        iconUser.setText("\ue604");
 
-    private void setTabas(){
-// Manipulo el Action bar del Activity por código
-        // primero cargo el actionbar
-        //android.app.ActionBar actionBar = getActionBar();
-        // Creo una vista de tablas con el metodo NAVIGATION_MODE_TABS
-        //actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-        getSupportActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-/*
-        actionBar.addTab(actionBar.newTab().setText("Hoteles").setTabListener((android.app.ActionBar.TabListener) this));
-        actionBar.addTab(actionBar.newTab().setText("Amigos").setTabListener((android.app.ActionBar.TabListener) this));
-        actionBar.addTab(actionBar.newTab().setText("Perfíl").setTabListener((android.app.ActionBar.TabListener) this));
-        */
-    }
+        TextView iconHeart = (TextView) findViewById(R.id.tv_icon_heart);
+        iconHeart.setTypeface(iconsFamily);
+        iconHeart.setText("\ue601");
+
+        TextView iconComment = (TextView) findViewById(R.id.tv_comment_bubble);
+        iconComment.setTypeface(iconsFamily);
+        iconComment.setText("\ue610");
 
 
-    @Override
-    public void onTabSelected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
-
-    }
-
-    @Override
-    public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
-
-    }
-
-    @Override
-    public void onTabReselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
 
     }
 }
