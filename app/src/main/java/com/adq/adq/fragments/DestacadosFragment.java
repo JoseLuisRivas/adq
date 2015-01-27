@@ -1,4 +1,4 @@
-package com.adq.adq.Fragments;
+package com.adq.adq.fragments;
 
 
 import android.os.Bundle;

@@ -1,87 +1,93 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/relativeLayout_ppal_activity_amigos"
     tools:context="com.adq.adq.HotelsActivity">
 
     <TableLayout
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tableLayout">
+        android:shrinkColumns="*"
+        android:stretchColumns="*"
+        android:orientation="vertical"
+        android:id="@+id/tablelayout_activity_amigos">
+
 
         <TableRow
+            android:id="@+id/tableRow34"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:gravity="center_horizontal"
-            android:paddingTop="@dimen/font_9dp"
-            android:layout_gravity="center_horizontal">
+            android:padding="5dip">
 
             <TextView
-                android:textSize="@dimen/font_60dp"
-                android:id="@+id/TextView03"
-                android:text=""
-                android:layout_weight="1"
-                android:textColor="#000000"
-                android:layout_gravity="center_horizontal"
-                android:layout_width="fill_parent" />
-            <TextView
-                android:textSize="@dimen/font_56dp"
-                android:id="@+id/tv_icon_heart"
-                android:text="2"
-                android:layout_weight="1"
-                android:textColor="#ff5b5b5b"
-                android:layout_gravity="center_horizontal"
-                android:layout_width="fill_parent" />
-
-            <TextView
-                android:textSize="@dimen/font_56dp"
-                android:id="@+id/tv_comment_bubble"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_list_fgm_hotels"
                 android:text="3"
-                android:layout_weight="1"
-                android:textColor="#ff5b5b5b"
-                android:layout_gravity="center_horizontal"
-                android:layout_width="fill_parent" />
+                android:textColor="@color/custom_greyDrk_5e5e5e"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:gravity="center"
+                android:textSize="@dimen/font_56dp"/>
 
             <TextView
-                android:textSize="@dimen/font_56dp"
-                android:id="@+id/tv_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_maps_fgm_hotels"
                 android:text="4"
-                android:layout_weight="1"
-                android:textColor="#ff5b5b5b"
-                android:layout_gravity="center_horizontal"
-                android:layout_width="fill_parent" />
+                android:textColor="@color/custom_greyDrk_5e5e5e"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:gravity="center"
+                android:textSize="@dimen/font_56dp" />
 
             <TextView
-                android:textSize="@dimen/font_60dp"
-                android:id="@+id/TextView07"
-                android:text=""
-                android:layout_weight="1"
-                android:textColor="#000000"
-                android:layout_gravity="center_horizontal"
-                android:layout_width="fill_parent" />
-
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_photos_fgm_hotels"
+                android:text="5"
+                android:clickable="true"
+                android:textColor="@color/custom_greyDrk_5e5e5e"
+                android:onClick="onClick"
+                android:gravity="center"
+                android:textSize="@dimen/font_56dp" />
 
         </TableRow>
+
     </TableLayout>
 
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/relativeLayout_contenedor_activity_hotel"/>
 
-    <fragment
-        android:name="com.adq.adq.fragments.DestacadosFragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/fragment_hotels_1"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/fragment_hotels_2"
-        android:layout_alignStart="@+id/fragment_hotels_2"
-        android:layout_marginBottom="190dp" />
+    <TableRow
+        android:id="@+id/tableRow324"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:gravity="center_horizontal"
+        android:padding="5dip"
+        android:background="#ffc8cee8"
+        android:layout_below="@+id/tablelayout_activity_amigos"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
-    <fragment
-        android:name="com.adq.adq.fragments.AmigosFragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/fragment_hotels_2"
-        android:layout_marginTop="111dp"
-        android:layout_below="@+id/tableLayout"
-        android:layout_centerHorizontal="true" />
+
+    </TableRow>
+
+
+
+
+        <fragment
+            android:name="com.adq.adq.fragments.AmigosFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fragment_default_hotels"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            tools:layout="@layout/fragment_amigos" />
 <!--
     <TextView
         android:textSize="@dimen/font_12dp"
